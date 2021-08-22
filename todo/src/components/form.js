@@ -1,16 +1,17 @@
 import React from "react";
 
-const Form = ({setInputText, todos , setTodos}) => {
+const Form = ({ setInputText, todos, setTodos, inputText }) => {
 
-    const inputTextHandler = (e)=>{
+    const inputTextHandler = (e) => {
         console.log(e.target.value);
         setInputText(e.target.value);
     };
-    const submitHandler =(e)=>{
+    const submitHandler = (e) => {
         e.preventDefault();
-setTodos([
-    ... todos, {text: inputText, completed: false, id:Math.random()*1000}
-])
+        setTodos([
+            ...todos, { text: inputText, completed: false, id: Math.random()*1000 }
+        ]);
+        setInputText("")
     }
 
     return (
@@ -20,9 +21,9 @@ setTodos([
                 <div className="form-row">
                     <div className="col-md-6 mb-3">
                         <label for="validationCustom01">Title</label>
-                        <input onChange={inputTextHandler} type="text" className="form-control" name="user_first_name"
+                        <input onChange={inputTextHandler} type="text"  value= {inputText} className="form-control" name="user_first_name"
                             placeholder="Title" required />
-                            <a onClick={submitHandler} className="btn btn-primary" id="submit" href=""> <i  className="fa fa-plus"> add</i></a>
+                        <a onClick={submitHandler} className="btn btn-primary" id="submit" href=""> <i className="fa fa-plus"> add</i></a>
 
                     </div>
                     <div className="col-md-6 mb-3">

@@ -1,13 +1,18 @@
 import React from "react";
-
-const TodoList = () => {
+import Todo from "./todo";
+const TodoList = ({ todos }) => {
 
     return (
         <div className="container">
-          
-                <ul className="share-toggle">  </ul>
 
-           
+            <ul className="">
+
+                {todos.map((todo) => (
+
+                    <Todo  text= {todo.text} />
+                ))}
+
+            </ul>
 
 
         </div>

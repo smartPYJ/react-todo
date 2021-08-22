@@ -72,7 +72,7 @@
 .share-toggle,
 .fixed_share ul.listing > li {
     font-size: 20px;
-    width: 90%;
+    width: 70%;
     height: 40px;
     right: 40px;
     display: flex;
@@ -99,7 +99,7 @@ ul.listing {
 }
 .share-toggle:hover,
 .fixed_share ul.listing > li:hover {
-  transform: scale(1.1) rotate(360deg);
+  transform: scale(1.1) rotate(10deg);
 }
 
 .fixed_share .facebook, 
@@ -507,7 +507,8 @@ small,
 mark,
 .mark {
   padding: 0.2em;
-  background-color: #fcf8e3;
+  background-color: #fcf8e346;
+
 }
 
 .list-unstyled {
@@ -5380,8 +5381,10 @@ a.badge-dark:focus, a.badge-dark.focus {
   font-weight: 700;
   line-height: 1;
   color: #000;
+
   text-shadow: 0 1px 0 #fff;
   opacity: 0.5;
+
 }
 .close:hover {
   color: #000;

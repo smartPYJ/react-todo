@@ -18,8 +18,13 @@ function App() {
 
 
 
-      <Form todos={todos} setTodos={setTodos} setInputText={setInputText} />
-      <TodoList />
+      <Form
+      inputText = {inputText}
+       todos={todos}
+       setTodos={setTodos}
+        setInputText={setInputText}
+         />
+      <TodoList  todos ={todos} />
     </div>
 
 
